@@ -124,3 +124,54 @@ section {
 .home .icons a:hover {
     transform: scale(1.3);
 }
+
+.home video {
+    z-index: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    clip-path: circle(0% at 0 50%);
+}
+
+.home video.active {
+    clip-path: circle(150% at 0 50%);
+    transition: 2s;
+}
+
+.home::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(1, 1, 1, 0.5);
+    z-index: 700;
+    left: 0;
+    top: 0;
+}
+
+.video-nav {
+    z-index: 800;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    transform: translateY(80px);
+    margin-bottom: 12px;
+}
+
+.video-nav .nav-item {
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.video-nav .nav-item.active {
+    width: 30px;
+}
