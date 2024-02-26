@@ -105,3 +105,22 @@ section {
     font-size: 18px;
     font-weight: 500;
 }
+
+.home .icons {
+    position: absolute;
+    right: 60px;
+    display: flex;
+    flex-direction: column;
+    z-index: 900;
+}
+
+.home .icons a {
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 20px;
+    transition: .3s;
+}
+
+.home .icons a:hover {
+    transform: scale(1.3);
+}
